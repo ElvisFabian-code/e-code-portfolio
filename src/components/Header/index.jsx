@@ -1,12 +1,12 @@
-import "./Header.css"
-import HeaderTitle from "../../ui/HeaderTitle"
-import CodeBlock from "../../ui/CodeBlock"
-import Facts from "../../ui/Facts"
-import { profile1 } from "../../assets"
-import SocialHandles from "../../ui/SocialHandles"
-import BreathCircle from "../../ui/BreathCircle"
+import "./Header.css";
+import HeaderTitle from "../../ui/HeaderTitle";
+import CodeBlock from "../../ui/CodeBlock";
+import Facts from "../../ui/Facts";
+import { profile_main } from "../../assets";
+import SocialHandles from "../../ui/SocialHandles";
+import BreathCircle from "../../ui/BreathCircle";
 
- const code = `
+const code = `
 const developer = {
   firstName:"Elvis",
   lastNmae:"Fabian",
@@ -17,34 +17,35 @@ const developer = {
   //code();
   //repeat();
   }
-}`
+}`;
 
 const Header = () => {
   return (
-    <header id ="header">
+    <header id="header">
       <BreathCircle />
       <div className="section_wrapper">
         <div className="grid upper">
           <div className="column">
-              <HeaderTitle />
+            <HeaderTitle />
           </div>
-          <div className="column">
-            <img src={profile1} className='profile__photo' alt="profile" />
+          <div className="profile">
+            <img src={profile_main} className="profile__photo" alt="profile" />
           </div>
         </div>
         <div className="card grid lower">
           <CodeBlock language={"javascript"} code={code} />
           <div>
             <p className="text__muted description">
-          I trun ideas into code dissecting user challanges to solutions that resonates with billions of users.
-        </p>
-        <Facts />
-        <SocialHandles />
+              I blend clean code, scalable architecture, and creativity to
+              engineer next-generation digital platforms.
+            </p>
+            <Facts />
+            <SocialHandles />
           </div>
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

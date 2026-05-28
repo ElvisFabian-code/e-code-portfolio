@@ -1,11 +1,13 @@
-export { default as profile1 } from "./profile-1.png"
-export { default as cert } from "./cert.jpeg";
+export { default as profile_main } from "./profile-r.png";
+export { default as cert } from "./cert.jpg";
+export { default as lincoln } from "./lincoln.png";
+export { default as harcourt } from "./harcourt.webp";
 
 //Projects images export
 export { default as project2 } from "./project-2.png";
-export { default as project3 } from "./project-3.jpg";
+export { default as project3 } from "./project-3.png";
 export { default as project5 } from "./project-5.png";
-export { default as project6 } from "./project-6.jpg";
+export { default as project6 } from "./project-6.png";
 export { default as project7 } from "./project7.png";
 export { default as project8 } from "./project8.png";
 
@@ -30,3 +32,9 @@ export { default as excel } from "./icons/excel.svg";
 export { default as jira } from "./icons/jira.svg";
 export { default as slack } from "./icons/slack.svg";
 export { default as x } from "./icons/X.svg";
+export { default as node } from "./icons/node.png";
+export { default as nest } from "./icons/nest.png";
+export { default as typescript } from "./icons/typescript.png";
+export { default as python } from "./icons/python.png";
+export { default as mongodb } from "./icons/mongodb.png";
+export { default as postgresql } from "./icons/postgresql.png";

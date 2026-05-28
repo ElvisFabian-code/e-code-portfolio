@@ -8,7 +8,6 @@ import { FaArrowUpRightFromSquare, FaBarsStaggered } from 'react-icons/fa6';
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
-  console.log("showSidebar", showSidebar)
   return (
     <nav className='card flex__center navbar'>
       { showSidebar && (<div className ="aside__overlay" onClick={()=> setShowSidebar(!showSidebar)} />)}
@@ -25,7 +24,7 @@ const Navbar = () => {
           { 
            menu.map((list,index)=>(
             <Link to= {list.name.toLowerCase()} 
-              spy="true"
+              spy={true}
               smooth={true}
               offset={-100} 
               duration={500}

@@ -30,7 +30,7 @@ const About = () => {
             I am <span className="color__primary">Elvis Fabian</span>
           </h1>
           <p className="text__muted description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum incidunt laudantium saepe facilis molestias, aliquid sunt repellat quisquam quod ipsum, recusandae at eveniet dolore, corrupti ad reiciendis fugiat qui libero?
+            I am a Full-Stack Developer and Creative Director who bridges the gap between robust, scalable architecture and pixel-perfect design. From engineering high-performance web applications to crafting cinematic visual content, I build immersive digital experiences that are as functional under the hood as they are captivating on the screen.
           </p>
         </div>
       </div>

@@ -16,7 +16,7 @@ const Certifications = () => {
         spaceBetween={40}
         autoplay={true}
         speed={3000}
-        loopt={true}
+        loop={true}
         modules={[Autoplay]}
         breakpoints={{700:{slidesPerView: 2 }}}
         >

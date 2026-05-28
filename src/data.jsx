@@ -1,5 +1,6 @@
 import { FaPaintBrush } from "react-icons/fa";
-import { AiFillGithub, AiFillLinkedin, AiFillYoutube, AiOutlineTwitter } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiFillYoutube, AiOutlineTwitter, AiFillTikTok } from "react-icons/ai";
+import { FaUpwork } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
 import { GiIdea } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
@@ -12,9 +13,17 @@ import {
   project7,
   project8,
   cert,
+  lincoln,
+  harcourt,
   figma,
+  sketch,
   xd,
-  ma,
+  node,
+  nest,
+  typescript,
+  python,
+  mongodb,
+  postgresql,
   firebase,
   css,
   html,
@@ -43,200 +52,143 @@ export const menu = [
 
 export const services = [
   {
-    title: "Project Managment",
-    icon: <FaPaintBrush />,
-    description: `As a Project Manager i coordinate IT and business team activities related to the implementation and development of
-     a new Data Platform Observability service,  Data Platform Automation,
-      Web Applications and software Projects. Also work closely with the Business Project Manager and other key stakeholders 
-      to ensure project success, maintain budget control, and manage reporting, risks, and dependencies.
-`,
-  },
-  {
-    title: "Web Development",
+    title: "Fullstack Development",
     icon: <FaCodeCompare />,
     color: "blueviolet",
     colorRGB: "138, 43, 226",
-    description: `Building responsive, dynamic, and high-performance websites tailored to your needs. 
-    Using modern technologies like React, Node.js, and more, I ensure your site is optimized 
-    for speed, scalability, and accessibility, delivering a robust online presence.`,
+    description: `Architecting scalable, lightning-fast web ecosystems from database to interface. 
+    Leveraging modern frameworks like React and Node.js, I build high-performance, 
+    accessible applications engineered to scale seamlessly with your growth.`,
   },
   {
-    title: "Content Creation",
+    title: "Creative  Consulting",
     icon: <GiIdea />,
     color: "var(--color-success)",
     colorRGB: "var(--color-success-rgb)",
-    description: `Producing compelling digital content that resonates with your audience. From blogs 
-                  and technical documentation to engaging website copy, I ensure your brand's message 
-                  is clear, impactful, and aligned with your business goals.`,
+    description: `Translating complex visions into striking digital narratives. Whether optimizing 
+    brand strategy, direct copy, or media workflows, I align technical precision with bold 
+    creative execution to build identities that command attention.`,
   },
 ];
+
+
+
+
+
+
 export const projects = [
+  
   {
-    title: "OIL Export & Import",
-    image: project7,
-    category: "Bussiness Website",
-    description: `Transforming education with AI, our School UI Design project revolutionizes the 
-                     learning experience. Seamlessly integrating intelligent features, personalized interfaces, 
-                     and intuitive navigation, our design empowers educators and students alike. Experience 
-                     innovation at its finest as we pave the way for a smarter, more efficient educational 
-                     journey.`,
-    demoLink: "https://oracleous.com/",
-    stacks: [
-      {
-        name: "ReactJs",
-        logo: react,
-      },
-      {
-        name: "Tailwind",
-        logo: tailwind,
-      }
-    ],
-  },
-  {
-    title: "E-Commerce Application",
+    title: "Hey Judy",
     image: project2,
-    category: "Web",
-    description: `Enhance your online shopping experience with our E-Commerce Application 
-      UI design project. Seamlessly blending aesthetics with functionality, our intuitive 
-      interface offers easy navigation, personalized recommendations, and secure 
-      transactions. Elevate your digital storefront and captivate customers with a visually 
-      stunning design tailored to your brand`,
-    demoLink: "https://google.com/",
+    category: "AI Solution",
+    description: "An advanced AI assistant optimized for Canadian businesses and citizens.",
+    demoLink: "https://www.judyintelligence.ai/",
     stacks: [
-      {
-        name: "ReactJs",
-        logo: react,
-      },
-      {
-        name: "CSS",
-        logo: css,
-      },
-      {
-        name: "JavaScript",
-        logo: javascript,
-      },
+      { name: "Typescript", logo: typescript },
+      { name: "nestJs", logo: nest },
+      { name: "mongodb", logo: mongodb }
     ],
   },
   {
-    title: "Robotic Engineering Web Application",
+    title: "AI-Powered School Management System",
+    image: project7,
+    category: "EdTech Platform",
+    description: "An enterprise platform automating academic workflows and administrative management.",
+    demoLink: "#",
+    stacks: [
+      { name: "ReactJs", logo: react },
+      { name: "Tailwind", logo: tailwind },
+      { name: "NodeJs", logo: node },
+      { name: "MongoDB", logo: mongodb }
+    ],
+  },
+  {
+    title: "Geodex",
     image: project3,
-    category: "Web",
-    description: `Unlock the future of robotics with our Robotic Engineering Web Application
-      project. Seamlessly integrating cutting-edge technology, data analytics, 
-      and collaborative tools, our platform empowers engineers to design, simulate, 
-      and optimize robotic systems. Experience innovation at its peak as we redefine the 
-      boundaries of robotic engineering.`,
-    demoLink: "https://google.com/",
+    category: "Adtech",
+    description: "A data-driven advertising solution engineered for hyper-local target optimization.",
+    demoLink: "https://www.geodex.tech/",
     stacks: [
-      {
-        name: "ReactJs",
-        logo: react,
-      },
-      {
-        name: "figma",
-        logo: figma,
-      },
-      {
-        name: "Tailwind",
-        logo: tailwind,
-      },
+      { name: "ReactJs", logo: react },
+      { name: "nestJs", logo: nest },
+      { name: "Tailwind", logo: tailwind }
     ],
   },
   {
-    title: "School Web App",
+    title: "AI Learning RAG App",
     image: project8,
-    category: "Web Apps",
-    description: `Simplify project coordination with our intuitive Project Management application. Track tasks, collaborate in real-time, and streamline workflows effortlessly. With customizable features and robust reporting, stay organized and efficient.
-                     Elevate your project management experience and achieve success with ease.`,
-    demoLink: "https://www.napps.com.ng/school-single.php?campus_id=VG5wRk0wMTNQVDA9",
+    category: "Learning App",
+    description: "An intelligent knowledge engine using Retrieval-Augmented Generation to process complex documents.",
+    demoLink: "#",
     stacks: [
-      {
-        name: "React Native",
-        logo: react,
-      },
-      {
-        name: "fima",
-        logo: figma,
-      },
-      {
-        name: "tailwind",
-        logo: tailwind,
-      },
+      { name: "React", logo: react },
+      { name: "tailwind", logo: tailwind },
+      { name: "node", logo: node },
+      { name: "postgresql", logo: postgresql }
     ],
   },
   {
-    title: "Mobile bank - App Design",
+    title: "Mobile Bank - App Design",
     image: project5,
     category: "UI/UX",
-    description: `Experience banking at your fingertips with our sleek Mobile Bank app design. Seamlessly manage your finances on-the-go with intuitive navigation, secure transactions, and personalized insights. Enjoy a modern interface that prioritizes convenience and accessibility, revolutionizing your banking experience.`,
-    demoLink: "https://google.com/",
+    description: "A high-fidelity financial mobile application design centered on micro-interactions.",
+    demoLink: "#",
     stacks: [
-      {
-        name: "Figma",
-        logo: figma,
-      },
+      { name: "Figma", logo: figma }
     ],
   },
   {
-    title: "Quiz App Development",
+    title: "Oracleous",
     image: project6,
-    category: "Apps",
-    description: `Elevate engagement and knowledge retention with our Quiz App 
-                    Development project. Seamlessly crafted for interactive learning 
-                    experiences, our app offers customizable quizzes, real-time feedback, 
-                    and captivating visuals. Empower users to test their knowledge anytime,
-                     anywhere, fostering a dynamic learning environment tailored to their 
-                     needs.`,
-    demoLink: "https://google.com/",
+    category: "Agriculture Tech",
+    description: "An intelligent agritech platform optimizing crop management and yield prediction.",
+    demoLink: "https://oracleous.com/",
     stacks: [
-      {
-        name: "React Native",
-        logo: reactnative,
-      },
-      {
-        name: "Figma",
-        logo: figma,
-      },
-      {
-        name: "XD",
-        logo: xd,
-      },
-      {
-        name: "Bootstrap",
-        logo: bootstrap,
-      },
+      { name: "React", logo: react },
+      { name: "Tailwind", logo: tailwind }
     ],
   },
 ];
 
 export const skills = [
   {
-    title: "Project Management",
+    title: "Back-end Development",
     data: [
       {
-        skill: "Microsoft Azure",
+        skill: "NodeJs",
         level: "Experienced",
-        logo: ma,
+        logo: node,
       },
       {
-        skill: "Trelo",
-        level: "Experienced",
-        logo: trello,
-      },
-      {
-        skill: "Jira",
-        level: "Experienced",
-        logo: jira,
-      },
-      {
-        skill: "Microsoft Excel",
+        skill: "NestJs",
         level: "Intermediate",
-        logo: excel,
+        logo: nest,
       },
       {
-        skill: "Slack",
+        skill: "Typescript",
+        level: "intermidiate",
+        logo: typescript,
+      },
+      {
+        skill: "Python",
         level: "Intermediate",
-        logo: slack,
+        logo: python,
+      },
+      {
+        skill: "MongoDB",
+        level: "Intermediate",
+        logo: mongodb,
+      },
+      {
+        skill: "PostgreSQL",
+        level: "Intermediate",
+        logo: postgresql,
+      },      ,
+      {
+        skill: "Firebase",
+        level: "Intermidiate",
+        logo: firebase,
       },
     ],
   },
@@ -274,9 +226,9 @@ export const skills = [
         logo: react,
       },
       {
-        skill: "Firebase",
-        level: "Intermidiate",
-        logo: firebase,
+        skill: "figma",
+        level: "Begineer",
+        logo: figma,
       },
     ],
   },
@@ -300,8 +252,8 @@ export const contactInfo = [
   },
   {
     name: "WhatsApp",
-    value: "+2349126037965",
-    link: "https://api.whatsapp.com/send?phone=+2349126037965",
+    value: "+2348136431037",
+    link: "https://api.whatsapp.com/send?phone=+2348136431037",
     icon: whatsappicon,
     btnIcon: <BsWhatsapp />,
     color: "rgb(38,234,112)",
@@ -311,65 +263,39 @@ export const socialHandles = [
   {
     name: "Twitter",
     icon: <AiOutlineTwitter />,
-    link: "",
+    link: "https://x.com/louisfabian79",
   },
   {
     name: "Github",
     icon: <AiFillGithub />,
-    link: "",
+    link: "https://github.com/ElvisFabian-code",
   },
   {
-    name: "LinkedIn",
-    icon: <AiFillLinkedin />,
-    link: "",
+    name: "Upwork",
+    icon: <FaUpwork />,
+    link: "https://www.upwork.com/freelancers/~01a4a5598ba4016823?mp_source=share",
   },
   {
-    name: "Youtube",
-    icon: <AiFillYoutube />,
-    link: "https://www.youtube.com/channel/UCEtnsPZQEd0l1tbr_nDQd5Q?sub_confirmation=1",
+    name: "TikTok",
+    icon: <AiFillTikTok />,
+    link: "https://www.tiktok.com/@creativeforceng",
   },
 ];
 
 export const testimonials = [
   {
-    avatar: cert,
-    name: "Bsc Computer Science",
-    review: ` Lincoln University, 2026
-              Specialization: AI & Machine Learning
-              Key Project: Developed a real-time object detection system using Python and OpenCV, achieving 90% accuracy in identifying objects in video streams. View Project
-              Relevant Coursework: Data Structures and Algorithms, Machine Learning, Computer Vision, Software Design
-              Skills: Python, React, JavaScript, Html, Css, Git, Agile Development,Php`,
+    avatar: lincoln,
+    name: "BSc in Computer Science: Hons Artificial Intelligence",
+    review: "Lincoln University (Final Year). Specialized in building contextual knowledge engines, predictive models, and deploying intelligent full-stack workflows using cutting-edge LLMs and robust API architectures.",
   },
   {
     avatar: cert,
-    name: "Certificate in Project management",
-    review: ` DEXA, 2025
-
-              Completed the DEXA Project Management Certificate program, gaining expertise in Agile and Waterfall methodologies.
-              Applied project management principles to the development of a new software feature, resulting in on-time delivery and a 10% reduction in development costs.
-              Proficient in project planning, risk management, stakeholder communication, and resource allocation.
-              Experienced with Jira and Confluence.`,
+    name: "Diploma in Web Development",
+    review: "MSK Computer Institute. Engineered highly responsive client interfaces using core frontend technologies paired with scalable relational database architectures and secure, seamless user authentication pipelines.",
   },
   {
-    avatar: cert,
-    name: "Diploma in web development",
-    review: ` MSK Computer Institute, 2023
-
-              Gained web development expertise, proficient in HTML, CSS and JavaScript.
-              Developed a responsive school site featuring  an about the shool login and registration. View Project
-              Experienced in database design and management with MySql.
-              Committed to creating user-friendly and accessible web applications.`,
-  },
-  {
-    avatar: cert,
-    name: "Fullstack Certifcate",
-    review: ` BWS, 2025
-
-              Building upon a Diploma in Web Development, this certificate provided advanced training in modern full-stack technologies.
-
-              Specialized in the React ecosystem, including Next.js and Redux, for building performant and scalable single-page applications.
-              Developed a real-time data visualization dashboard using React, Node.js, and GraphQL. View Project
-              Gained experience with deploying applications to AWS using Docker and Kubernetes.
-              Proficient in building RESTful APIs and implementing authentication and authorization.`,
+    avatar: harcourt,
+    name: "Advanced Diploma in Software Engineering",
+    review: "Harcourt Intelligence. Mastered advanced cross-platform architectures, systems programming, and embedded technology using Java, C/C#, Python, Dart, Flutter, and specialized IoT development pipelines.",
   },
 ];

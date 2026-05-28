@@ -1,54 +1,149 @@
-#header{
+#header {
     overflow: hidden;
     position: relative;
 }
 
-#header .breath__circle{
+#header .breath__circle {
     position: absolute;
     right: 0;
     z-index: 1;
 }
-#header .grid{
+
+#header .grid {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     position: relative;
-    gap: 1rem;
+    gap: 3rem;
     z-index: 2;
 }
 
-#header .grid.upper{
-    grid-template-columns: auto 500px;
+#header .grid.upper {
+    /* FIX: Changed 500px to 1fr so the right side column can dynamically scale up past 500px */
+    grid-template-columns: auto 1fr; 
     margin-top: 140px;
+    align-items: center; 
 }
 
-#header .description{
+#header .description {
     margin-bottom: 10px;
 }
 
-#header .social__handles__container{
+#header .social__handles__container {
     margin-top: 10px;
 }
 
-#header .profile__photo{
-    object-fit: contain;
-    filter: grayscale(100%);
+/* 1. Updated Parent Container: Holds the Glow and provides room to scale */
+#header .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    max-width: 900px !important; 
+    justify-self: center;
+    overflow: visible !important; 
+    position: relative; /* Anchor point for the pseudo-glow below */
 }
 
-@media (max-width:768px){
+/* 2. Realistic floor glow underneath your avatar */
+#header .profile::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Positions the light pool right under the photo base */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; 
+    height: 30px;
+    background: radial-gradient(ellipse at center, rgba(138, 43, 226, 0.5) 0%, rgba(138, 43, 226, 0) 90%);
+    border-radius: 50%;
+    filter: blur(12px);
+    z-index: 1;
+    pointer-events: none;
+    
+    /* Optional: Smoothly pulsates the glow size to match the floating timing */
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* 3. Corrected Photo Rule: Floating works again */
+#header .profile__photo {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+    filter: grayscale(100%);
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 2;
+    
+    /* FIX: Removed the '!important' string from transform here so the keyframes can animate it */
+    transform: scale(1.2); 
+    
+    /* Triggers the float keyframes continuously */
+    animation: forceFloat 4s ease-in-out infinite !important;
+}
+
+/* 4. Synchronized Keyframes: Scale factor matches perfectly at 1.6 */
+@keyframes forceFloat {
+    0% {
+        transform: scale(1.4) translateY(0px);
+    }
+    50% {
+        transform: scale(1.4) translateY(-20px); /* Smoothly floats upward */
+    }
+    100% {
+        transform: scale(1.4) translateY(0px);
+    }
+}
+
+/* Glow Pulse Keyframes */
+@keyframes glowPulse {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(-50%) scale(0.8); /* Glow shrinks slightly when you float higher away from it */
+        opacity: 0.4;
+    }
+}
+
+#header .text__muted {
+    margin-top: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
     #header .grid,
-    #header .grid.upper{
+    #header .grid.upper {
         grid-template-columns: 100%;
     }
-    #header .grid.upper .column{
-        margin-right: 100px;
+    #header .grid.upper .column {
+        margin-right: 0; 
     }
-    #header .grid.upper .column:first-child{
-        height: 200px;
+    #header .grid.upper .column:first-child {
+        height: auto; 
+        margin-bottom: 2rem;
     }
-    #header .description{
+    #header .description {
         text-align: center;
     }
-    #header .social__handles__container{
+    #header .social__handles__container {
         justify-content: center;
     }
+    
+    #header .profile {
+        max-width: 450px; 
+    }
+    
+    /* Scales down the avatar slightly on mobile layouts to keep it inside viewport boundaries */
+    #header .profile__photo {
+        transform: scale(1.3);
+        animation: forceFloatMobile 4s ease-in-out infinite !important;
+    }
+}
+
+/* Mobile Keyframes backup to prevent clipping */
+@keyframes forceFloatMobile {
+    0% { transform: scale(1.1) translateY(0px); }
+    50% { transform: scale(1.1) translateY(-15px); }
+    100% { transform: scale(1.1) translateY(0px); }
 }
