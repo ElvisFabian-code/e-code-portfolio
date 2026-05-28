@@ -1,4 +1,4 @@
-import "./ServiveCard.css"
+import "./ServiceCard.css"
 import SocialHandles from "../SocialHandles"
 
 const ServiceCard = ({title, description, icon, color, colorRGB}) => {

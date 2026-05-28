@@ -16,8 +16,6 @@ import {
   lincoln,
   harcourt,
   figma,
-  sketch,
-  xd,
   node,
   nest,
   typescript,
@@ -34,10 +32,6 @@ import {
   reactnative,
   emailicon,
   whatsappicon,
-  trello,
-  jira,
-  excel,
-  slack,
   x,
 } from "./assets";
 
