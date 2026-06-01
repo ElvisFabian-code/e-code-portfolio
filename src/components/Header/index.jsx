@@ -9,14 +9,14 @@ import BreathCircle from "../../ui/BreathCircle";
 const code = `
 const developer = {
   firstName:"Elvis",
-  lastNmae:"Fabian",
+  lastName:"Fabian",
   aka:"Creative Force",
   hobby: repeat = () =>{
   //eat();
   //sleep();
   //code();
   //repeat();
-  }
+  }=
 }`;
 
 const Header = () => {

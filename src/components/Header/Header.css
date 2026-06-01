@@ -132,6 +132,7 @@
     
     #header .profile {
         max-width: 450px; 
+        margin-top: -8rem;
     }
     
     /* Scales down the avatar slightly on mobile layouts to keep it inside viewport boundaries */
